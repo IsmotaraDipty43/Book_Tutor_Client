@@ -21,18 +21,18 @@ const TutorDetails = () => {
     const fetchTutorDetails = async () => {
       try {
         const response = await secureAxios.get(apiUrl);
-        setTutor(response.data); // Set fetched data to state
+        setTutor(response.data);
       } catch (error) {
         console.error("Error fetching tutor details:", error);
       } finally {
-       setloading(false); // Stop loading spinner
+       setloading(false); 
       }
     };
 
     fetchTutorDetails();
   }, [apiUrl]);
 
-  // Handle tutor booking
+
   const handleBookTutor = async () => {
     const bookingData = {
       tutorId: tutor._id,
@@ -40,7 +40,7 @@ const TutorDetails = () => {
       language: tutor.language,
       price: tutor.price,
       tutorEmail: tutor.email,
-      email: user.email, // Email from logged-in user
+      email: user.email, 
     };
 
     try {
@@ -58,14 +58,13 @@ const TutorDetails = () => {
     }
   };
 
-  if (loading) return <Loading />; // Show loading spinner while fetching data
+  if (loading) return <Loading />; 
 
   
 
-  // Define dynamic class for text color based on theme
+
   const textClass = theme === 'dark' ? 'text-white' : 'text-gray-800';
 
-  // Render fetched tutor details
   return (
     <div className={`p-6 w-full md:w-10/12 mx-auto ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
       <h2 className={`text-3xl font-semibold text-center mb-6 ${textClass}`}>
