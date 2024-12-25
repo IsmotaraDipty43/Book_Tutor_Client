@@ -7,20 +7,20 @@ import { ThemeContext } from "../ThemeContext/ThemeContext";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const MyBook = () => {
-  const { user } = useContext(Authcontext); // User's email for fetching data
+  const { user } = useContext(Authcontext); 
   const [bookedTutors, setBookedTutors] = useState([]);
   const [loading, setLoading] = useState(true);
   const { theme } = useContext(ThemeContext);
-  const secureAxios = useAxiosSecure(); // Use the secure axios instance
+  const secureAxios = useAxiosSecure(); 
 
-  // Fetch booked tutors and their details
+ 
   useEffect(() => {
     const fetchBookedTutors = async () => {
       if (!user) return;
       try {
         const response = await secureAxios.get(`/booktutor/${user.email}`);
 
-        // Sequentially fetch details for each booked tutor
+       
         const tutorsWithDetails = [];
         for (const tutor of response.data) {
           try {
@@ -45,11 +45,11 @@ const MyBook = () => {
   // Handle Review Button Click
   const handleReview = async (tutorId) => {
     try {
-      // Send a PATCH request to increment review count in the backend
+   
       const response = await secureAxios.patch(`/reviewtutor/${tutorId}`);
   
       if (response.data.success) {
-        // Update the review count in the frontend state
+      
         setBookedTutors((prev) =>
           prev.map((tutor) =>
             tutor._id === tutorId ? { ...tutor, review: tutor.review + 1 } : tutor
