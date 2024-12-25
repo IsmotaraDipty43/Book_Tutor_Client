@@ -10,9 +10,9 @@ const FindTutor = () => {
 
   useEffect(() => {
     const fetchTutors = async () => {
-      setLoading(true); // Show loading indicator
+      setLoading(true); 
 
-      // Define the API URL based on whether there's a search term
+     
       const apiUrl = search
         ? `${import.meta.env.VITE_backendURL}/alltutor?search=${search}` // Fetch filtered data if search term exists
         : `${import.meta.env.VITE_backendURL}/alltutor`; // Fetch all data if no search term
