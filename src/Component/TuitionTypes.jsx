@@ -17,7 +17,7 @@ const TuitionTypes = () => {
           Find the Best Tuition Type which suits you most
         </p>
         <div className="tuition-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Home Tutoring */}
+    
           <div
             className={`tuition-card p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:translate-y-2 ${theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-gray-700"}`}
           >
@@ -37,7 +37,6 @@ const TuitionTypes = () => {
             </p>
           </div>
 
-          {/* Online Tutoring */}
           <div
             className={`tuition-card p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:translate-y-2 ${theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-gray-700"}`}
           >
