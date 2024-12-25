@@ -98,7 +98,7 @@ const logOut=()=>{
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if (currentUser?.email) {
-                setUser(currentUser); // Set the full user object
+                setUser(currentUser); 
                 const user = { email: currentUser.email };
                 axios.post('https://tutor-server-side.vercel.app/jwt', user, { withCredentials: true })
                     .then((res) => {
@@ -110,7 +110,7 @@ const logOut=()=>{
                         setloading(false);
                     });
             } else {
-                setUser(null); // Reset user state when no user is authenticated
+                setUser(null); 
                 axios.post('https://tutor-server-side.vercel.app/logout', {}, { withCredentials: true })
                     .then((res) => {
                         console.log('logout', res.data);
@@ -123,7 +123,7 @@ const logOut=()=>{
             }
         });
     
-        // Cleanup function to unsubscribe when the component unmounts
+       
         return () => unsubscribe();
     }, []);
     
