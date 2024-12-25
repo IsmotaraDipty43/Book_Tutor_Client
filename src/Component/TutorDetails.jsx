@@ -5,18 +5,18 @@ import { Authcontext } from "../Provider/AuthProvider";
 import Loading from "./Loading";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ThemeContext } from "../ThemeContext/ThemeContext"; // Import ThemeContext
+import { ThemeContext } from "../ThemeContext/ThemeContext"; 
 import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const TutorDetails = () => {
-  const { id: tutorId } = useParams(); // Extract tutorId from the URL
-  const [tutor, setTutor] = useState(null); // State to store fetched tutor details
-  const [loading,setloading] = useState(true); // Loading state
-  const { user } = useContext(Authcontext); // Access the logged-in user from AuthContext
-  const { theme } = useContext(ThemeContext); // Get the current theme
-  const apiUrl = `/alltutor/tutor/${tutorId}`; // API endpoint
+  const { id: tutorId } = useParams(); 
+  const [tutor, setTutor] = useState(null); 
+  const [loading,setloading] = useState(true); 
+  const { user } = useContext(Authcontext); 
+  const { theme } = useContext(ThemeContext); 
+  const apiUrl = `/alltutor/tutor/${tutorId}`;
   const secureAxios = useAxiosSecure()
-  // Fetch tutor details from the database
+
   useEffect(() => {
     const fetchTutorDetails = async () => {
       try {
