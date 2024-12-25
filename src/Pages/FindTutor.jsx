@@ -14,8 +14,8 @@ const FindTutor = () => {
 
      
       const apiUrl = search
-        ? `${import.meta.env.VITE_backendURL}/alltutor?search=${search}` // Fetch filtered data if search term exists
-        : `${import.meta.env.VITE_backendURL}/alltutor`; // Fetch all data if no search term
+        ? `${import.meta.env.VITE_backendURL}/alltutor?search=${search}` 
+        : `${import.meta.env.VITE_backendURL}/alltutor`; 
 
       try {
         const response = await axios.get(apiUrl);
@@ -29,13 +29,13 @@ const FindTutor = () => {
           setError('Something went wrong. Please try again later.');
         }
       } finally {
-        setLoading(false); // Hide loading indicator
+        setLoading(false); 
       }
     };
 
     fetchTutors();
 
-  }, [search]); // Dependency array will run the effect when the 'search' state changes
+  }, [search]);
 
   return (
     <div className="p-6 w-full md:w-10/12 mx-auto">
@@ -46,7 +46,7 @@ const FindTutor = () => {
             type="text"
             placeholder="Search for tutors"
             className="w-full ml-2 px-2 py-1 text-gray-700 focus:outline-none"
-            onChange={(e) => setSearch(e.target.value)} // Update search term
+            onChange={(e) => setSearch(e.target.value)} 
           />
           <button className="bg-blue-500 text-white px-4 py-2 ml-2 rounded-lg hover:bg-blue-600">
             Search
@@ -57,11 +57,11 @@ const FindTutor = () => {
       {/* Tutors Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6">
         {error ? (
-          <p className="text-center text-gray-500">{error}</p> // Display error if there's no data or if an error occurred
+          <p className="text-center text-gray-500">{error}</p> 
         ) : loading ? (
-          <p className="text-center text-gray-500">Loading tutors...</p> // Handle loading state
+          <p className="text-center text-gray-500">Loading tutors...</p> 
         ) : tutors.length === 0 ? (
-          <p className="text-center text-gray-500">No tutors found.</p> // Display message if no tutors are available
+          <p className="text-center text-gray-500">No tutors found.</p> 
         ) : (
           tutors.map((tutor, ind) => (
             <div
