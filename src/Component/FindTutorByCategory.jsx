@@ -7,17 +7,17 @@ import { ThemeContext } from "../ThemeContext/ThemeContext";
 
 const FindTutorByCategory = () => {
       const { theme } = useContext(ThemeContext);
-  const { category } = useParams(); // Get category from URL params
-  const [tutors, setTutors] = useState([]); // Store tutors data in state
-  const [loading,setloading] = useState(true); // Loading state
-  const [error, setError] = useState(null); // Error state
+  const { category } = useParams(); 
+  const [tutors, setTutors] = useState([]); 
+  const [loading,setloading] = useState(true); 
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     const apiUrl = `${import.meta.env.VITE_backendURL}/alltutor/${category}`;
     const fetchTutors = async () => {
       try {
         const response = await axios.get(apiUrl);
-        setTutors(response.data); // Use the structured data format
+        setTutors(response.data); 
       } catch (err) {
         setError("Error fetching tutors");
       } finally {
