@@ -1,24 +1,24 @@
 import React, { useContext } from 'react';
 import Lottie from 'react-lottie';
-import animationData from '../assets/tutorAnimation.json'; // Path to your Lottie animation file
+import animationData from '../assets/tutorAnimation.json'; 
 import { ThemeContext } from '../ThemeContext/ThemeContext';
 
 const Banner = () => {
        const { theme} = useContext(ThemeContext);
-    // Lottie configuration
+  
     const defaultOptions = {
         loop: true,
-        autoplay: true, // Animation starts immediately
-        animationData: animationData, // Import the Lottie animation file
+        autoplay: true, 
+        animationData: animationData, 
         rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice', // Ensures the animation fits within the container
+            preserveAspectRatio: 'xMidYMid slice', 
         },
     };
 
     return (
         <section className= {` ${theme === 'dark' ? 'bg-white py-16 flex justify-center items-center' : 'bg-white py-16 flex justify-center items-center'}`}>
             <div className="flex flex-col lg:flex-row items-center w-full md:w-11/12 lg:w-10/12 mx-auto px-4">
-                {/* Left Side: Text Content */}
+               
                 <div className="text-center lg:text-left">
                     <h1 className={`text-4xl md:text-5xl font-bold  mb-4 text-[#4A5568]`}>
                         Find the Perfect Tutor for You
