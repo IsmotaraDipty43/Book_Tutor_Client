@@ -1,6 +1,6 @@
 # BookATutor
 
-**BookATutor** is a fully responsive web application designed to help users find, book, and review tutors. The platform supports login and registration functionality with Google login via Firebase, JWT authentication, and a private route system to ensure only authenticated users can access certain features.
+**BookATutor** is a fully responsive web application designed to help users find, book, and review tutors. The platform supports login and registration functionality with Google login via Firebase,JWT authentication, and a private route system to ensure only authenticated users can access certain features.
 
 ## Live URL
 [BookATutor Live](#) *(https://tutor-project-62018.web.app)*
