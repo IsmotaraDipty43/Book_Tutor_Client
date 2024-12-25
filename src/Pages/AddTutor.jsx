@@ -10,7 +10,7 @@ import useAxiosSecure from '../hooks/useAxiosSecure';
 const AddTutor = () => {
   const { theme } = useContext(ThemeContext);
   const { user } = useContext(Authcontext);
-  const secureAxios = useAxiosSecure(); // Use the secure axios instance
+  const secureAxios = useAxiosSecure(); 
   const apiUrl = '/alltutor'; 
   const [formData, setFormData] = useState({
     username: user?.displayName || '', 
