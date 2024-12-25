@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';  // For redirection
+import { useNavigate } from 'react-router-dom';  
 import axios from 'axios';
 import { Authcontext } from '../Provider/AuthProvider';
 import useAxiosSecure from '../hooks/useAxiosSecure';
@@ -8,10 +8,10 @@ const MyTutorials = () => {
   const { user } = useContext(Authcontext);
   const [tutorials, setTutorials] = useState([]);
   const navigate = useNavigate();
-  const secureAxios = useAxiosSecure(); // Use the secure axios instance
+  const secureAxios = useAxiosSecure();
   const apiUrl = `/alltutor`;
 
-  // Fetch tutorials based on the logged-in user's email
+ 
   useEffect(() => {
     if (user && user.email) {
       secureAxios.get(`${apiUrl}/add/${user.email}`,{withCredentials:true})
@@ -24,7 +24,7 @@ const MyTutorials = () => {
     }
   }, [user,secureAxios]);
 
-  // Handle tutorial deletion
+ 
   const handleDelete = (id) => {
     if (user && user.email) {
       secureAxios.delete(`${apiUrl}/delete/${id}`)
