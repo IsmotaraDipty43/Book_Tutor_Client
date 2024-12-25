@@ -11,7 +11,7 @@ const StatsSection = () => {
       }`}
     >
       <div className="container mx-auto px-6 sm:px-12">
-        {/* Title and Description */}
+    
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold">
             Why Choose Us?
