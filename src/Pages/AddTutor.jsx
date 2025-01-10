@@ -89,7 +89,7 @@ const AddTutor = () => {
   
 
   return (
-    <section className='mt-10'>
+    <section className='mt-20'>
       <div className={`form-container ${theme} p-6 max-w-4xl mx-auto bg-white shadow-lg rounded-lg`}>
         <h2 className="text-3xl font-bold text-center text-black mb-6">Submit Your Tutor Information</h2>
         <form onSubmit={handleSubmit} className="space-y-4">

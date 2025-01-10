@@ -66,7 +66,8 @@ const TutorDetails = () => {
   const textClass = theme === 'dark' ? 'text-white' : 'text-gray-800';
 
   return (
-    <div className={`p-6 w-full md:w-10/12 mx-auto ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+<section className="mt-24">
+<div className={`p-6 w-full md:w-10/12 mx-auto ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
       <h2 className={`text-3xl font-semibold text-center mb-6 ${textClass}`}>
         Tutor Details
       </h2>
@@ -107,6 +108,7 @@ const TutorDetails = () => {
       </div>
       <ToastContainer />
     </div>
+</section>
   );
 };
 

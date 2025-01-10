@@ -38,7 +38,8 @@ const MyTutorials = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+   <section className='mt-24'>
+     <div className="container mx-auto p-4">
       <h2 className="text-3xl font-bold text-center mb-6">My Tutorials</h2>
       {/* Responsive table wrapper */}
       <div className="overflow-x-auto">
@@ -86,6 +87,7 @@ const MyTutorials = () => {
         </table>
       </div>
     </div>
+   </section>
   );
 };
 

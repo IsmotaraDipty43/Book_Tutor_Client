@@ -68,7 +68,8 @@ const MyBook = () => {
   if (loading) return <Loading />;
 
   return (
-    <div className="p-6 w-full md:w-10/12 mx-auto">
+ <section className="mt-24">
+     <div className="p-6 w-full md:w-10/12 mx-auto">
       <ToastContainer />
       <h2
         className={`text-3xl font-semibold text-center mb-6 ${
@@ -103,6 +104,7 @@ const MyBook = () => {
         ))}
       </div>
     </div>
+ </section>
   );
 };
 

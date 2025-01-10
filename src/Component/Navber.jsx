@@ -15,12 +15,11 @@ const Navber = () => {
     };
 
     return (
-        <div className={` flex justify-center items-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-[#F4F8FB]'}`}>
-            <div
-                className={`navbar w-full md:w-11/12 mx-auto justify-center items-center ${
-                    theme === 'dark' ? 'text-white' : 'text-black'
-                }`}
-            >
+        <div className={` fixed top-0 left-0 right-0 z-10 flex justify-center items-center w-full ${theme === 'dark' ? 'bg-gray-900' : 'bg-[#F4F8FB]'}`}>
+          <div
+    className={`navbar w-full md:w-11/12 mx-auto justify-center items-center  ${theme === 'dark' ? 'text-white' : 'text-black'}`}
+>
+
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn mr-1 btn-ghost lg:hidden">
@@ -124,6 +123,21 @@ const Navber = () => {
                                     </NavLink>
                                 </>
                             )}
+                              <NavLink
+                                key="home"
+                                className={({ isActive }) =>
+                                    `text-lg font-semibold ${
+                                        isActive
+                                            ? theme === 'dark'
+                                                ? 'text-green-600'
+                                                : 'text-green-500'
+                                            : ''
+                                    }`
+                                }
+                                to="/about"
+                            >
+                                About Us
+                            </NavLink>
                         </ul>
                     </div>
                     <div className="flex justify-center items-center">
@@ -222,6 +236,22 @@ const Navber = () => {
                                     </NavLink>
                                 </>
                             )}
+
+<NavLink
+                                key="home"
+                                className={({ isActive }) =>
+                                    `text-lg font-semibold ${
+                                        isActive
+                                            ? theme === 'dark'
+                                                ? 'text-green-600'
+                                                : 'text-green-500'
+                                            : ''
+                                    }`
+                                }
+                                to="/about"
+                            >
+                                About Us
+                            </NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end md:gap-2">

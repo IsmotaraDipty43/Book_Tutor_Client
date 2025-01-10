@@ -16,6 +16,7 @@ import MyBook from "../Pages/Mybook";
 import ErrorPage from "../Pages/ErrorPage";
 import MyTutorials from "../Pages/MyTutorials";
 import EditTutorial from "../Component/EditTutorial";
+import AboutUs from "../Pages/AboutUs";
 
 
   const router = createBrowserRouter([
@@ -56,6 +57,10 @@ import EditTutorial from "../Component/EditTutorial";
       {
         path:'/edit-tutorial/:id',
         element:<PrivatRoutes><EditTutorial></EditTutorial></PrivatRoutes>,
+      },
+      {
+        path:'/about',
+        element:<AboutUs></AboutUs>,
       },
       ]
     },

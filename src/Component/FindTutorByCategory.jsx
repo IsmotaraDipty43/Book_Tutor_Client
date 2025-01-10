@@ -42,7 +42,8 @@ const FindTutorByCategory = () => {
   
 
   return (
-    <div className="min-h-screen  flex flex-col items-center justify-center">
+ <section className="mt-24">
+     <div className="min-h-screen  flex flex-col items-center justify-center">
    <h2 className={`text-center text-4xl font-bold  mb-6 mt-10 ${theme==='dark' ? 'text-white' : 'text-gray-800' }`}>
     Discover Top Tutors for {category.charAt(0).toUpperCase() + category.slice(1)}
 </h2>
@@ -95,6 +96,7 @@ const FindTutorByCategory = () => {
         ))}
       </div>
     </div>
+ </section>
   );
 };
 
