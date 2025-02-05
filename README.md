@@ -56,6 +56,8 @@ Below are the key dependencies used in this project:
     "lottie-react": "^2.3.4"
   }
 }
+##  How to Run the Project Locally
+Follow these steps to set up and run the project on your local machine using **VS Code**.
 
 
 
