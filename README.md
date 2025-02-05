@@ -42,7 +42,7 @@
 Follow these steps to set up and run the project on your local machine using **VS Code**.
 
 1️⃣ **Clone the Repository**  
-   git clone https://github.com/your-username/book-a-tutor.git  
+   git clone https://github.com/IsmotaraDipty43/Book_Tutor_Client 
 
 2️⃣ **Navigate to the Project Folder**  
    cd book-a-tutor  
