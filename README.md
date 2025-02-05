@@ -55,7 +55,7 @@ Below are the key dependencies used in this project:
     "react-toastify": "^9.0.1",
     "lottie-react": "^2.3.4"
   }
-
+}
 ## 🛠 How to Run the Project Locally
 
 ## 🛠 How to Run the Project Locally
