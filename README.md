@@ -37,9 +37,7 @@
 * **React Icons**: For customizable icons throughout the application.
 * **LottieFiles**: To add interactive animations to enhance the user experience.
 
-## 📦 Dependencies Used  
-Below are the key dependencies used in this project:  
-
+## Dependencies Used  
 ```json
 {
   "dependencies": {
@@ -56,31 +54,6 @@ Below are the key dependencies used in this project:
     "lottie-react": "^2.3.4"
   }
 }
-## 🛠 How to Run the Project Locally
-
-## 🛠 How to Run the Project Locally
-
-Follow these steps to set up and run the project on your local machine using **VS Code**.
-
-1️⃣ **Clone the Repository**  
-   git clone https://github.com/your-username/book-a-tutor.git  
-
-2️⃣ **Navigate to the Project Folder**  
-   cd book-a-tutor  
-
-3️⃣ **Open the Project in VS Code**  
-   code .  
-
-4️⃣ **Install Dependencies**  
-   npm install  
-
-5️⃣ **Set Up Environment Variables**  
-   - Create a `.env` file in the root directory  
-   - Add required environment variables (e.g., API keys, database URLs)  
-
-6️⃣ **Run the Development Server**  
-   npm run dev  
-
 
 
 
