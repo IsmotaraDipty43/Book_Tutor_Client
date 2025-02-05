@@ -81,7 +81,6 @@ Follow these steps to set up and run the project on your local machine using **V
 6️⃣ **Run the Development Server**  
    npm run dev  
 
-🎉 Your application is now running at 👉 http://localhost:3000  
 
 
 
